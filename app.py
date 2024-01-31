@@ -42,7 +42,7 @@ chat_model = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106
 chat_model_random = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106-preview', temperature=1)
 
 TITLE = 'Essay Interview Tool v0.1'
-st.set_page_config(page_title=TITLE, page_icon=None)
+st.set_page_config(page_title=TITLE, page_icon='logo.svg')
 st.title(TITLE)
 
 progress_bar = st.progress(st.session_state.current_iteration * progress_step)
