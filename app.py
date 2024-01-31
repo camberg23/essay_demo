@@ -140,7 +140,7 @@ if st.session_state.process_started:
         # Submit button
         if st.button('**Submit**'):
             with st.spinner('Processing these choices and generating a new round of prompts, please standby...'):
-                st.snow()
+                # st.snow()
                 # st.write(st.session_state.total_choices)
                 process_user_input()  # Function to process user input
 
