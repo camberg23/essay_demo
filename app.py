@@ -145,7 +145,7 @@ if st.session_state.process_started:
                 process_user_input()  # Function to process user input
 
 with st.sidebar:
-    st.title('Prompt Personalization')
+    st.title('Prompt Personalizer')
     user_input_topic = st.text_area("Paste the assigned prompt/topic of interest here:", key="personalization_input", height=250)
     if st.button('Personalize topic', key='submit_personalization'):
         if user_input_topic:
@@ -158,7 +158,7 @@ with st.sidebar:
                 st.write(personalized_prompt)
         else:
             st.error("Please enter a topic or prompt to proceed.")
-    st.title('Prompt Personalization')
+    st.title('Prompt Generator')
     if st.button('Generate a random personalized prompt'):
         with st.spinner('Generating a personalized prompt, please standby...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_idea_generator), llm=chat_model_random)
