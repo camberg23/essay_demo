@@ -76,7 +76,7 @@ CRITICAL CONTEXT: the profile you output will be used to personalize the writing
 FORMATTING REQUIREMENTS:
 - if this is the first time the profile is being generated, abide the the guidelines outlined in (1) above.
 - do not add any text above or below the bullets; it should just be the bullets
-- don't overexploit on specific topics (recall CRITICAL POINT 1 and CRITICAL POINT 2 above)
+- do NOT include any concrete topics here unless they were EXPLICITLY and ACTIVELY selected by the user (recall CRITICAL POINT 1 and CRITICAL POINT 2 above)
 - if the profile already exists, ensure that the overall formatting of the profile remains the same after your revisions/additions.
 - do not let the profile grow to more than a few hundred words. Keep it rich and informative, but succinct.
 - attempt to intelligently systematize the profile rather than just list every new insight or facet.
