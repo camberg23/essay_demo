@@ -145,9 +145,10 @@ if st.session_state.process_started:
                 process_user_input()  # Function to process user input
 
 with st.sidebar:
+    disable = st.session_state.profile == 'No profile yet, this is the first ever session!'
     st.title('Prompt Personalizer')
     user_input_topic = st.text_area("Paste the assigned prompt/topic of interest here:", key="personalization_input", height=250)
-    if st.button('Personalize topic', key='submit_personalization'):
+    if st.button('Personalize topic', key='submit_personalization', disabled=disable):
         if user_input_topic:
             # Call LLM with the user's input
             with st.spinner('Generating suggestions, please standby...'):
@@ -159,7 +160,7 @@ with st.sidebar:
         else:
             st.error("Please enter a topic or prompt to proceed.")
     st.title('Prompt Generator')
-    if st.button('Generate a random personalized prompt'):
+    if st.button('Generate a random personalized prompt', disabled=disable):
         with st.spinner('Generating a personalized prompt, please standby...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_idea_generator), llm=chat_model_random)
                 random_topic = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests)
