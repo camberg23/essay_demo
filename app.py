@@ -88,7 +88,7 @@ def generate_all_llm_output():
 
 # 'Go' button to start the process
 if not st.session_state.process_started:
-    st.session_state.selected_interests = st.multiselect("To begin, please choose up to five of your top interests from the following list:", interests, max_selections=5)
+    st.session_state.selected_interests = st.multiselect("To begin, please choose up to six of your top interests from the following list:", interests, max_selections=6)
     disabled = len(st.session_state.selected_interests) == 0
     if st.button('Begin Demo', disabled=disabled):
         with st.spinner('Generating initial set of prompt choices, please wait...'):
