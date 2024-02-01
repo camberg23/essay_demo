@@ -135,13 +135,14 @@ YOUR OUTPUTS:
 
 interests = [
     "Philosophical Inquiry",
-    "Social Commentary",
+    "Social Commentary and Activism",
     "Human Emotions and Relationships",
     "Personal Growth and Self-Discovery",
-    "Cultural Exploration",
+    "Global Cultures and Practices",
     "Historical Events and Eras",
     "Science and Futurism",
-    "Environmental and Nature-Inspired",
+    "Nature-Inspired",
+    "Environmental Conservation and Activism",
     "Mythology and Legends",
     "Psychology and the Human Mind",
     "Political and Global Affairs",
