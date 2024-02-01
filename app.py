@@ -123,7 +123,7 @@ def process_total_choices():
 # Display LLM output and options if process started
 if st.session_state.process_started:
     with st.expander('See cognition of LLM'):
-        # st.write('FULL OUTPUTS', st.session_state.llm_output)
+        st.write('FULL OUTPUTS', st.session_state.llm_output)
         st.write('**REASONING**:', st.session_state.reasoning)
         st.write('**PROFILE:**',st.session_state.profile)
     st.subheader('**Please select which of the following prompts you would be more interested and motivated to write about.**')
