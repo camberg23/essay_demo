@@ -91,17 +91,18 @@ Given a user's profile (developed through their selections of various binary pro
 
 This might involve finding a specific, unique, and/or personalized angle, approach, subtopic, prompt variant, etc. that intelligently and wisely reconciles the assigned prompt/topic of interest with what we understand about the user.
 
-Here is the user's assigned prompt/topic of interest:
-{USER_INPUT}
-
 Here is the current model of the user's unique interests; motivations; personality; and goals:
 {PROFILE}
 
-And here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
+Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
 {INTERESTS}
 
+Most importantly, here is the user's assigned prompt/topic of interest:
+{USER_INPUT}
+
 Given the profile and the assigned prompt/topic of interest, please provide suggestions for personalizing the topic/prompt for them.
-Note: please do NOT fixate too closely on the highly specific topical information in the profile, instead leveraging their more general interests; motivations; personality; and goals to personalize the topic/prompt.
+Note 1: if this seems like an assigned prompt, you MUST make sure that your outputs still fulfill the broad requirement of the prompt/essay topic (such that if the student writes about your prompts, they will ALSO be fulfilling the assigned topic.) THIS IS CRITICAL!
+Note 2: please do NOT fixate too closely on the highly specific topical information in the profile, instead leveraging their more general interests; motivations; personality; and goals to personalize the topic/prompt.
 
 CRITICAL: THIS IS A TOOL MEANT TO FACILTIATE THE USER'S CREATIVITY, NOT FOR YOU TO COME UP WITH IDEAS FOR THEM. MAKE SURE YOUR SUGGESTIONS DO NOT DO THE WORK FOR THEM, BUT RATHER HELP THEM THINK THROUGH HOW THEY COULD PERSONALIZE THE TOPIC FOR THEMSELVES.
 
