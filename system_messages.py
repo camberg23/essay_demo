@@ -27,7 +27,7 @@ The choice will be presented to the user as 'which of the following prompts woul
 FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONING:' section, followed by {N} binary prompt choices ('PROMPTS:'). Each prompt should be preceded EXACTLY with the string (A) or (B) (see below for examples)
 
 1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kind of prompt-decision might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
-2. PROMPTS: given REASONING, output the {N} sets of binary prompt choices that the user will select from.
+2. PROMPTS: given REASONING, output the {N} sets of binary prompt choices that the user will select from. Always include the 'PROMPTS:' string before each set of prompts.
 
 Example output (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
 REASONING:
