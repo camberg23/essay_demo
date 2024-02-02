@@ -97,10 +97,14 @@ Here is the current model of the user's unique interests; motivations; personali
 Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
 {INTERESTS}
 
-Most importantly, here is the user's assigned prompt/topic of interest:
+THE PROMPT AND USER'S ROUGH IDEA:
+Here is the user's assigned prompt/topic of interest:
 {USER_INPUT}
 
-Given the profile and the assigned prompt/topic of interest, please provide suggestions for personalizing the topic/prompt for them.
+Here is the user's rough thoughts about a possible angle:
+{FIRST_THOUGHTS}
+
+Given the profile and the assigned prompt/topic of interest, please provide suggestions for personalizing the topic/prompt for them, taking their rough ideas into some account.
 Requirement 1: if this seems like an assigned prompt, you MUST make sure that your outputs still fulfill the broad requirement of the prompt/essay topic (such that if the student writes about your prompts, they will ALSO be fulfilling the assigned topic.) THIS IS CRITICAL!
 Requirement 2: please try to AVOID using specific topical information in the profile, instead leveraging their more general interests, motivations, personality, and goals to personalize the topic/prompt.
 Requirement 3: please do NOT try to overambitiously synthesize every point of the user's profile or interests into a single prompt. Each suggestion should draw on a SMALL but CONTEXTUALLY RELEVANT subset of the user's profile. Be incisive and deep with your suggestions, not shallow and attempting to fit their whole profile into the personalization.
