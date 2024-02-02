@@ -156,14 +156,15 @@ if st.session_state.process_started:
 with st.sidebar:
     disable = st.session_state.profile == 'No profile yet, this is the first ever session!'
     st.title('Prompt Personalizer')
-    user_input_topic = st.text_area("Paste the assigned prompt/topic of interest here:", key="personalization_input", height=250)
+    user_input_topic = st.text_area("Paste your assigned prompt/topic of interest:", height=200)
+    user_first_thoughts = st.text_area("Jot down any initial rough thoughts you have about the topic:", height=200)
     if st.button('Personalize topic', key='submit_personalization', disabled=disable):
         if user_input_topic:
             # Call LLM with the user's input
             with st.spinner('Generating suggestions, please standby...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_personalizer), llm=chat_model)
                 personalized_prompt = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests,
-                                                             USER_INPUT=user_input_topic)
+                                                     USER_INPUT=user_input_topic, FIRST_THOUGHTS=user_first_thoughts)
                 st.subheader('Here are some suggestions for personalizing this topic:')
                 st.write(personalized_prompt)
         else:
@@ -175,10 +176,3 @@ with st.sidebar:
                 random_topic = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests)
                 st.subheader('Here is a personalized writing prompt for you:')
                 st.write(random_topic)
-
-
-
-# TODOS
-# while the new questions load, ask them an open-ended question (what are your interests?, etc)
-# while answering questions, process answers to open-ended questions (incorporate into profile)
-# this may require multithreading or something so we can be process the content into the profile
