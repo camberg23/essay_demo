@@ -13,7 +13,7 @@ PROFILE:
 
 Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
 {INTERESTS}
-(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards.)
+(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards. Also, do not try to always combine all these topics in your prompts; go narrow and deep rather than broad and shallow.)
 
 This session will consist of {N} prompt choices, so cover the relevant space accordingly!
 
