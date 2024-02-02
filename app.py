@@ -100,7 +100,7 @@ if not st.session_state.process_started:
     disabled = len(st.session_state.selected_interests) == 0
     with col2:
         if st.button('Begin Demo', disabled=disabled):
-            with st.spinner('Generating initial set of prompt choices, please wait...'):
+            with st.spinner('Generating first set of choices...'):
                 st.session_state.process_started = True
                 st.session_state.current_iteration = 1
                 generate_all_llm_output()
@@ -148,7 +148,7 @@ if st.session_state.process_started:
 
         # Submit button
         if st.button('**Submit**'):
-            with st.spinner('Processing these choices and generating a new round of prompts, please standby...'):
+            with st.spinner('Processing your choices and generating a new set of prompts (this might take ~30s)...'):
                 # st.snow()
                 # st.write(st.session_state.total_choices)
                 process_user_input()  # Function to process user input
@@ -161,7 +161,7 @@ with st.sidebar:
     if st.button('Personalize topic', key='submit_personalization', disabled=disable):
         if user_input_topic:
             # Call LLM with the user's input
-            with st.spinner('Generating suggestions, please standby...'):
+            with st.spinner('Generating suggestions...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_personalizer), llm=chat_model)
                 personalized_prompt = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests,
                                                      USER_INPUT=user_input_topic, FIRST_THOUGHTS=user_first_thoughts)
@@ -171,7 +171,7 @@ with st.sidebar:
             st.error("Please enter a topic or prompt to proceed.")
     st.title('Prompt Generator')
     if st.button('Generate a random prompt for me', disabled=disable):
-        with st.spinner('Generating a personalized prompt, please standby...'):
+        with st.spinner('Generating a personalized prompt...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_idea_generator), llm=chat_model_random)
                 random_topic = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests)
                 st.subheader('Here is a personalized writing prompt for you:')
