@@ -97,7 +97,7 @@ if not st.session_state.process_started:
         )
     disabled = len(st.session_state.selected_interests) == 0
     with col2:
-        if st.button('Begin Demo', disabled=disabled):
+        if st.button('Begin Demo', label='hidden', label_visibility='hidden', disabled=disabled):
             with st.spinner('Generating initial set of prompt choices, please wait...'):
                 st.session_state.process_started = True
                 st.session_state.current_iteration = 1
