@@ -131,7 +131,7 @@ if st.session_state.process_started:
     # Process each iteration until all questions are answered
     if st.session_state.current_iteration <= N:
         # Radio buttons for options
-        st.session_state.selected_option = st.radio("If they required the same amount of time/effort, I would rather:", st.session_state.options, index=0)
+        st.session_state.selected_option = st.radio("If they required the same amount of time/effort, I would rather:", st.session_state.options, index=None)
         
         # Text input for custom answer
         if st.session_state.selected_option == "(D) Neither/something else":
