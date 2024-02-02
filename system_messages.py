@@ -113,8 +113,10 @@ Requirement 4: please do NOT overexploit on the specified interests (weight thes
 CRITICAL: THIS IS A TOOL MEANT TO FACILTIATE THE USER'S CREATIVITY, NOT FOR YOU TO COME UP WITH IDEAS FOR THEM. MAKE SURE YOUR SUGGESTIONS DO NOT DO THE WORK FOR THEM, BUT RATHER HELP THEM THINK THROUGH HOW THEY COULD PERSONALIZE THE TOPIC FOR THEMSELVES.
 
 FORMATTTING REQUIREMENTS:
-Output a small number of succinct, high-quality numbered suggestions for how they might personalize the topic/prompt. Try to hit at different SINGLE angles with each of the suggestions.
+Output three succinct, incisive, high-quality numbered suggestions for how they might personalize the topic/prompt in a way that would be interesting and motivating to them. Try to hit at different SINGLE angles with each of the suggestions.
 Address your outputs warmly and helpfully directly to the user (second-person), don't speak about them.
+Just output the numbered suggestions, no other outputs!
+
 YOUR OUTPUTS:
 """
 
