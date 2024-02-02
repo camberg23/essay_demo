@@ -124,8 +124,8 @@ def process_total_choices():
 if st.session_state.process_started:
     with st.expander('See cognition of LLM'):
         # st.write('FULL OUTPUTS', st.session_state.llm_output)
+        st.write('**USER PROFILE:**',st.session_state.profile)
         st.write('**REASONING**:', st.session_state.reasoning)
-        st.write('**PROFILE:**',st.session_state.profile)
     st.subheader('**Please select which of the following prompts you would be more interested and motivated to write about.**')
 
     # Process each iteration until all questions are answered
@@ -135,7 +135,7 @@ if st.session_state.process_started:
         
         # Text input for custom answer
         if st.session_state.selected_option == "(D) Neither/something else":
-            st.session_state.custom_answer = st.text_input("Write in:", value=st.session_state.custom_answer, placeholder="a few words on why you chose (D) or what you'd rather write about")
+            st.session_state.custom_answer = st.text_input("Write in:", value=st.session_state.custom_answer, placeholder="just a few words on why you chose (D) or what you'd rather write about")
 
         # Submit button
         if st.button('**Submit**'):
