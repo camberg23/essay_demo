@@ -102,9 +102,9 @@ Most importantly, here is the user's assigned prompt/topic of interest:
 
 Given the profile and the assigned prompt/topic of interest, please provide suggestions for personalizing the topic/prompt for them.
 Requirement 1: if this seems like an assigned prompt, you MUST make sure that your outputs still fulfill the broad requirement of the prompt/essay topic (such that if the student writes about your prompts, they will ALSO be fulfilling the assigned topic.) THIS IS CRITICAL!
-Requirement 2: please do NOT fixate too closely on the highly specific topical information in the profile, instead leveraging their more general interests; motivations; personality; and goals to personalize the topic/prompt.
+Requirement 2: please try to AVOID using specific topical information in the profile, instead leveraging their more general interests, motivations, personality, and goals to personalize the topic/prompt.
 Requirement 3: please do NOT try to overambitiously synthesize every point of the user's profile or interests into a single prompt. Each suggestion should draw on a SMALL but CONTEXTUALLY RELEVANT subset of the user's profile. Be incisive and deep with your suggestions, not shallow and attempting to fit their whole profile into the personalization.
-Requurement 4: please do NOT overexploit on the specified interests (weight these lower); give significantly more weight to the user profile.
+Requirement 4: please do NOT overexploit on the specified interests (weight these lower); give significantly more weight to the user profile.
 
 CRITICAL: THIS IS A TOOL MEANT TO FACILTIATE THE USER'S CREATIVITY, NOT FOR YOU TO COME UP WITH IDEAS FOR THEM. MAKE SURE YOUR SUGGESTIONS DO NOT DO THE WORK FOR THEM, BUT RATHER HELP THEM THINK THROUGH HOW THEY COULD PERSONALIZE THE TOPIC FOR THEMSELVES.
 
