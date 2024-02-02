@@ -170,7 +170,7 @@ with st.sidebar:
         else:
             st.error("Please enter a topic or prompt to proceed.")
     st.title('Prompt Generator')
-    if st.button('Generate a random personalized prompt', disabled=disable):
+    if st.button('Generate a random prompt for me', disabled=disable):
         with st.spinner('Generating a personalized prompt, please standby...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_idea_generator), llm=chat_model_random)
                 random_topic = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests)
