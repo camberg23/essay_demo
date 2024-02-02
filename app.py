@@ -95,7 +95,7 @@ if not st.session_state.process_started:
             "To begin, please choose up to six of your top interests from the following list:", 
             interests, 
             max_selections=6,
-            label_visibility="hidden"
+            label_visibility="collapsed"
         )
     disabled = len(st.session_state.selected_interests) == 0
     with col2:
