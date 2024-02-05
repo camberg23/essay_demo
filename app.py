@@ -100,7 +100,7 @@ if not st.session_state.process_started:
     disabled = len(st.session_state.selected_interests) == 0
     with col2:
         if st.button('Begin Demo', disabled=disabled):
-            with st.spinner('Generating first set of choices...'):
+            with st.spinner('Generating choices...'):
                 st.session_state.process_started = True
                 st.session_state.current_iteration = 1
                 generate_all_llm_output()
