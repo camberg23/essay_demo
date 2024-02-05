@@ -133,8 +133,8 @@ def process_total_choices():
 if st.session_state.process_started:
     with st.expander('See cognition of LLM'):
         # st.write('FULL OUTPUTS', st.session_state.llm_output)
-        st.write('**USER PROFILE:**',st.session_state.profile)
-        st.write('**REASONING**:', st.session_state.reasoning)
+        st.write('**CURRENT STATE OF USER PROFILE:**',st.session_state.profile)
+        st.write('**REASONING BEHIND CURRENT ROUND OF PROMPT CHOICES**:', st.session_state.reasoning)
     st.subheader('**Please select which of the following prompts you would be more interested and motivated to write about.**')
 
     # Process each iteration until all questions are answered
