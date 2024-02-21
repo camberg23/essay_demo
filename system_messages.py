@@ -68,7 +68,7 @@ The user has just answered a set of binary question choices (content generated b
 
 The reasoning behind these choices, the choices themselves, and the user's response to these choices was as follows (SESSION CHOICES):
 {SESSION_CHOICES}
-CRITICAL POINT 1 (YOUR MOST COMMON MISTAKE TO AVOID): DO NOT attribute to the user specific topical interests that were introduced in the text of the SESSION CHOICES (these were introduced by the AI, not the user). Make more GENERAL inferences about their interests from their choices!
+CRITICAL POINT 1 (YOUR MOST COMMON MISTAKE TO AVOID): DO NOT attribute to the user ANY specific topical interests that were introduced in the text of the SESSION CHOICES (these were introduced by the AI, not the user, so it is an error to say the user is interested in this or that SPECIFIC topic). Make more GENERAL inferences about their interests from their choices!
 CRITICAL POINT 2: please pay particular attention if the user ever chose '(D) Neither/something else,' as this means they were sufficiently uninterested in options (A)/(B) and/or sufficiently interested in what they input here that they manually entered it. It IS okay to use these as specific topical interests that the user has (in contrast to CRITICAL POINT 1).
 
 Please update the PROFILE given the new SESSION CHOICES. This may involve any of the following changes:
@@ -82,7 +82,7 @@ CRITICAL CONTEXT: the profile you output will be used to personalize the writing
 FORMATTING REQUIREMENTS:
 - if this is the first time the profile is being generated, abide the the guidelines outlined in (1) above.
 - do not add any text above or below the bullets; it should just be the bullets
-- do NOT include any concrete topics here unless they were EXPLICITLY and ACTIVELY selected by the user (recall CRITICAL POINT 1 and CRITICAL POINT 2 above)
+- DO NOT INCLUDE any SPECIFIC topics here unless they were EXPLICITLY and ACTIVELY selected by the user (recall CRITICAL POINT 1 and CRITICAL POINT 2 above)
 - if the profile already exists, ensure that the overall formatting of the profile remains the same after your revisions/additions.
 - do not let the profile grow to more than a few hundred words. Keep it rich and informative, but succinct.
 - attempt to intelligently systematize the profile rather than just list every new insight or facet.
