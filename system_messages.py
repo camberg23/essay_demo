@@ -1,4 +1,4 @@
-user_prompt_generator = """
+user_prompt_generator_OLD = """
 You have an important role in an application that personalizes the writing experience for a specific user.
 
 Your role within the greater system of the application is to generate {N} sets of binary prompt choices that will elicit the maximum amount of new information about the genuine interests of the user given what we currently do and do not know about the user.
@@ -49,6 +49,53 @@ PROMPTS:
 YOUR OUTPUTS:
 """
 
+user_prompt_generator = """
+You have an important role in an application that personalizes the writing experience for a specific user.
+
+Your role within the greater system of the application is to generate {N} sets of binary prompting questions that will elicit the maximum amount of new information about the genuine interests of the user given what we currently do and do not know about the user.
+
+The way that we learn more about the user is by presenting them with two reasonably different variations on a unifying concept, where the user's decision will be maximally informative about their unique topical and general interests; motivations; personality; and goals.
+
+Your job is to generate these {N} sets of two options.
+
+Here is what we already know about the user's unique topical and general interests; motivations; personality; and goals:
+PROFILE:
+{PROFILE}
+
+Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
+{INTERESTS}
+(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards. Also, do not try to always combine all these topics in your prompts; go narrow and deep rather than broad and shallow.)
+
+This session will consist of {N} prompt choices, so cover the relevant space accordingly!
+
+Your CRITICAL job is to come up with a {N} binary prompting questions that will refine and expand the above model of the user's unique topical and general interests; motivations; personality; and goals.
+
+Watch out for exploration vs. exploitation, and do your best to balance these, with a bias towards exploration. Do NOT get stuck in rabbit holes/only deepening existing models/ideas/themes: be very exploratory! Accordingly, here were the last choices you presented the user:
+{LAST_OPTIONS}
+
+The choice will be presented to the user as 'which of these questions do you find more interesting?' followed by the options you give.
+
+FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONING:' section, followed by {N} binary prompting questions ('QUESTIONS:'). Each prompt should be preceded EXACTLY with the string (A) or (B) (see below for examples)
+
+1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kinds of questions might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. BE EXPLORATORY! EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
+2. PROMPTS: given REASONING, output the {N} sets of binary question sets that the user will select from. Always include the 'QUESTIONS:' string before each set of prompts.
+
+EXAMPLE OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
+REASONING: Based on our observations, the user displays a strong affinity for creative problem-solving and a curiosity about the intersection of technology with human experiences. While we have discerned their interest in how innovations can enhance daily life and cultural understanding, we have yet to uncover their preferences for the application of these technologies in personal versus societal contexts, their appetite for risk in creative endeavors, and how they balance practicality with imaginative thinking. To bridge this gap, we will present questions that challenge the user to consider scenarios that require both creative thinking and practical decision-making. This approach aims to reveal deeper insights into their values, their preferred balance between innovation and tradition, and their vision for the future of technology and society.
+
+QUESTIONS:
+(A) Imagine you have the ability to create a new piece of technology that solves a personal inconvenience. What would this technology do, and how would it integrate into your daily life?
+(B) Envision a project that uses technology to address a widespread societal challenge. What challenge would you focus on, and what would your solution entail?
+
+(A) If you were to start a creative hobby that also serves a community purpose, what would it be and how would you engage others?
+(B) Consider the impact of creating a public art installation that incorporates interactive technology. What message or experience would you aim to convey?
+
+(A) Propose an idea for a novel or story that explores the theme of technology altering human relationships. What central conflict or question would you examine?
+(B) How would you design an experiment or study to investigate the effects of virtual reality on empathy and social skills?
+
+YOUR OUTPUTS:
+"""
+
 answer_profile_reconciliation = """
 You have an important role in an application that personalizes the writing experience for a specific user.
 
@@ -58,7 +105,7 @@ The current model of the user's interests; motivations; personality; and goals i
 And here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests (INTERESTS):
 {INTERESTS}
 
-The user has just answered a set of binary prompt choices (content generated by AI) that were designed to elicit the maximum amount of new information about their interests, motivations, personality, and goals user given what we currently do and do not know about the user.
+The user has just answered a set of binary question choices (content generated by AI) that were designed to elicit the maximum amount of new information about their interests, motivations, personality, and goals user given what we currently do and do not know about the user.
 
 The reasoning behind these choices, the choices themselves, and the user's response to these choices was as follows (SESSION CHOICES):
 {SESSION_CHOICES}
