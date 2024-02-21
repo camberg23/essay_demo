@@ -13,14 +13,16 @@ PROFILE:
 
 Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
 {INTERESTS}
-(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards. Also, do not try to always combine all these topics in your prompts; go narrow and deep rather than broad and shallow.)
+(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards. Also, do not try to always synthesize all these topics in your prompts. Isolate them intelligently to learn as much as possible with each binary set of questions.
 
-This session will consist of {N} prompt choices, so cover the relevant space accordingly!
+This session will consist of {N} question choices, so cover the relevant space accordingly!
 
 Your CRITICAL job is to come up with a {N} binary prompting questions that will refine and expand the above model of the user's unique topical and general interests; motivations; personality; and goals.
 
-Watch out for exploration vs. exploitation, and do your best to balance these, with a bias towards exploration. Do NOT get stuck in rabbit holes/only deepening existing models/ideas/themes: be very exploratory! Accordingly, here were the last choices you presented the user:
+Watch out for exploration vs. exploitation. YOU MUST BE HIGHLY EXPLORATORY: Do NOT get stuck in rabbit holes/only deepening existing models/ideas/themes. Accordingly, here were the last choices you presented the user:
 {LAST_OPTIONS}
+
+Make sure to not only deepen existing models (eg, the user is interested in X. Let's see if they're more interested in X.A or X.B) but attempt to build NEW ones (eg, the user is interested in X. let's find out if they're also interested in Q).
 
 The choice will be presented to the user as 'which of these questions do you find more interesting?' followed by the options you give.
 
@@ -31,8 +33,8 @@ FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONIN
 2a. Always include the 'QUESTIONS:' string before each set of prompts. Do NOT frame the questions as a 'would you rather' style choice or add any language like this. Simply generate two interesting questions. Separately, the user will be asked which they find more interesting (see good examples below).
 2b. Do not include any sort of 'or' language WITHIN questions (A) or (B). Simply ask a question (see good examples below).
 
-PAY ATTENTION TO EXAMPLAR OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
-REASONING: Based on our observations, the user displays a strong affinity for creative problem-solving and a curiosity about the intersection of technology with human experiences. While we have discerned their interest in how innovations can enhance daily life and cultural understanding, we have yet to uncover their preferences for the application of these technologies in personal versus societal contexts, their appetite for risk in creative endeavors, and how they balance practicality with imaginative thinking. To bridge this gap, we will present questions that challenge the user to consider scenarios that require both creative thinking and practical decision-making. This approach aims to reveal deeper insights into their values, their preferred balance between innovation and tradition, and their vision for the future of technology and society.
+PAY ATTENTION TO THIS EXAMPLAR OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
+REASONING: Based on the user's demonstrated interest in technology and its creative applications, we have a solid understanding of their enthusiasm for innovation and its societal impacts. However, to gain a more holistic view of the user's interests and potential hidden passions, it's crucial to explore beyond the confines of technology. This exploration will help us identify other domains the user might find compelling, such as arts, psychology, environmental science, or even philosophy. By juxtaposing a technology-focused question with one from a completely different field, we aim to uncover new layers of the user's interests, possibly revealing unexpected passions or curiosity areas that haven't been previously addressed.
 
 QUESTIONS:
 (A) Imagine you have the ability to create a new piece of technology that solves a personal inconvenience. What would this technology do, and how would it integrate into your daily life?
@@ -45,6 +47,10 @@ QUESTIONS:
 QUESTIONS:
 (A) Propose an idea for a novel or story that explores the theme of technology altering human relationships. What central conflict or question would you examine?
 (B) How would you design an experiment or study to investigate the effects of virtual reality on empathy and social skills?
+
+QUESTIONS:
+(A) If you could delve into the study of an ancient civilization, which one would it be and what mystery or aspect of their society are you most interested in uncovering?
+(B) Imagine you have the opportunity to learn an uncommon, perhaps even endangered, language fluently. Which language would you choose, and how do you think this knowledge could impact your perspective on the world or contribute to preserving cultural heritage?
 
 YOUR OUTPUTS:
 """
