@@ -17,12 +17,13 @@ Here are up to six interests that the user indicated from a comprehensive dropdo
 
 This session will consist of {N} question choices, so cover the relevant space accordingly!
 
-Your CRITICAL job is to come up with a {N} binary prompting questions that will refine and expand the above model of the user's unique topical and general interests; motivations; personality; and goals.
+Your CRITICAL job is to come up with a {N} binary prompting questions that will maximally contribute to refining and expanding the above PROFILE of the user's unique topical and general interests; motivations; personality; and goals.
 
 Watch out for exploration vs. exploitation. Do NOT get stuck pigeon-holing the user/only deepening existing models/ideas/themes. ALSO BE EXPLORATORY! Accordingly, here were the last choices you presented the user:
 {LAST_OPTIONS}
 
-Make sure to not only deepen existing models (eg, the user is interested in X. Let's see if they're more interested in X.A or X.B) but also attempt to build NEW ones (eg, the user is interested in X. let's find out if they're also interested in Q). In other words, do BOTH of these in every round of question sets!
+Make sure to not only deepen existing models (eg, the user is interested in X. Let's see if they're more interested in X.A or X.B) but also attempt to build NEW ones (eg, the user is interested in X. let's find out if they're also interested in Y). In other words, do BOTH of these in every round of question sets!
+However, also note that if a user consistently indicates disinterest in a particular topic, do NOT keep pushing them on that topic! Learn from it and move on. We have a very finite number of questions to learn as much as possible. Waste none.
 
 The choice will be presented to the user as 'which of these questions do you find more interesting?' followed by the options you give.
 
@@ -33,8 +34,10 @@ FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONIN
 2a. Always include the 'QUESTIONS:' string before each set of prompts. Do NOT frame the questions as a 'would you rather' style choice or add any language like this. Simply generate two interesting questions. Separately, the user will be asked which they find more interesting (see good examples below).
 2b. Do not include any sort of 'or' language WITHIN questions (A) or (B). Simply ask a question (see good examples below).
 
-PAY ATTENTION TO THIS EXAMPLAR OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
-REASONING: Based on the user's demonstrated interest in technology and its creative applications, we have a solid understanding of their enthusiasm for innovation and its societal impacts. However, to gain a more holistic view of the user's interests and potential hidden passions, it's crucial to explore beyond the confines of technology. This exploration will help us identify other domains the user might find compelling, such as arts, psychology, environmental science, or even philosophy. By juxtaposing a technology-focused question with one from a completely different field, we aim to uncover new layers of the user's interests, possibly revealing unexpected passions or curiosity areas that haven't been previously addressed.
+Pay general attention to this exemplar output, but do NOT overfit to the specific example given! It's just one possible example of very many.
+
+EXAMPLAR OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
+REASONING: Based on the user's demonstrated interest in technology and its creative applications, we have a solid understanding of their enthusiasm for innovation and its societal impacts. However, to gain a more holistic view of the user's interests and potential hidden passions, it's crucial to explore beyond the confines of technology. This exploration will help us identify other domains the user might find compelling, such as arts, psychology, or even philosophy. By juxtaposing a technology-focused question with one from a completely different field, we aim to uncover new layers of the user's interests, possibly revealing unexpected passions or curiosity areas that haven't been previously addressed.
 
 QUESTIONS:
 (A) Imagine you have the ability to create a new piece of technology that solves a personal inconvenience. What would this technology do, and how would it integrate into your daily life?
