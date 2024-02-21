@@ -84,8 +84,8 @@ FORMATTING REQUIREMENTS:
 - do not add any text above or below the bullets; it should just be the bullets
 - DO NOT INCLUDE any SPECIFIC topics here unless they were EXPLICITLY and ACTIVELY selected by the user (recall CRITICAL POINT 1 and CRITICAL POINT 2 above)
 - if the profile already exists, ensure that the overall formatting of the profile remains the same after your revisions/additions.
-- do not let the profile grow to more than a few hundred words. Keep it rich and informative, but succinct.
-- attempt to intelligently systematize the profile rather than just list every new insight or facet.
+- NEVER let the profile grow to more than a few hundred words/more than 15 key ideas/bullets. Keep it rich and informative, but succinct!
+- ALWAYS attempt to intelligently systematize the profile rather than just list every new insight or facet.
 
 YOUR OUTPUTS:
 """
