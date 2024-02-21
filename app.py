@@ -52,11 +52,11 @@ def parse_and_store_llm_output():
     # Split the output into reasoning and the prompts section
     parts = st.session_state.llm_output.split("REASONING:")
     if len(parts) > 1:
-        reasoning_part, prompts_part = parts[1].split("QUESTIONS", 1)
+        reasoning_part, prompts_part = parts[1].split("QUESTIONS:", 1)
         st.session_state.reasoning = reasoning_part.strip()
 
         # Split each set of prompts
-        prompts_sections = prompts_part.split("QUESTIONS")
+        prompts_sections = prompts_part.split("QUESTIONS:")
         st.session_state.all_prompts = [{'options_text': prompts.strip()} for prompts in prompts_sections if prompts.strip()]
 
 # Function to display current prompt and options
