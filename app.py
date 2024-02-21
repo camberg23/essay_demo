@@ -41,7 +41,7 @@ if 'all_prompts' not in st.session_state:
 chat_model = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106-preview', temperature=0.3)
 chat_model_random = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106-preview', temperature=1)
 
-TITLE = 'Essay: Intake and Prompt Personalization, v0.1'
+TITLE = 'Essay: Intake and Prompt Personalization, v0.2'
 st.set_page_config(page_title=TITLE, page_icon='essay_logo.png')
 st.title(TITLE)
 
@@ -135,12 +135,12 @@ if st.session_state.process_started:
         # st.write('FULL OUTPUTS', st.session_state.llm_output)
         st.write('**CURRENT STATE OF USER PROFILE:**',st.session_state.profile)
         st.write('**REASONING BEHIND CURRENT ROUND OF PROMPT CHOICES**:', st.session_state.reasoning)
-    st.subheader('**Please select which of the following prompts you would be more interested and motivated to write about.**')
+    st.subheader('**Please select which of the following questions you are naturally more interested in.**')
 
     # Process each iteration until all questions are answered
     if st.session_state.current_iteration <= N:
         # Radio buttons for options
-        st.session_state.selected_option = st.radio("If they required the same amount of time/effort, I would rather:", st.session_state.options, index=None)
+        st.session_state.selected_option = st.radio("If they required the same amount of time/effort, I would rather:", st.session_state.options, index=None, label_visibility='collapsed')
         
         # Text input for custom answer
         if st.session_state.selected_option == "(D) Neither/something else":
