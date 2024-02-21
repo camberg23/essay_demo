@@ -19,10 +19,10 @@ This session will consist of {N} question choices, so cover the relevant space a
 
 Your CRITICAL job is to come up with a {N} binary prompting questions that will refine and expand the above model of the user's unique topical and general interests; motivations; personality; and goals.
 
-Watch out for exploration vs. exploitation. YOU MUST BE HIGHLY EXPLORATORY: Do NOT get stuck in rabbit holes/only deepening existing models/ideas/themes. Accordingly, here were the last choices you presented the user:
+Watch out for exploration vs. exploitation. Do NOT get stuck pigeon-holing the user/only deepening existing models/ideas/themes. ALSO BE EXPLORATORY! Accordingly, here were the last choices you presented the user:
 {LAST_OPTIONS}
 
-Make sure to not only deepen existing models (eg, the user is interested in X. Let's see if they're more interested in X.A or X.B) but attempt to build NEW ones (eg, the user is interested in X. let's find out if they're also interested in Q).
+Make sure to not only deepen existing models (eg, the user is interested in X. Let's see if they're more interested in X.A or X.B) but also attempt to build NEW ones (eg, the user is interested in X. let's find out if they're also interested in Q). In other words, do BOTH of these in every round of question sets!
 
 The choice will be presented to the user as 'which of these questions do you find more interesting?' followed by the options you give.
 
