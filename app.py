@@ -40,7 +40,7 @@ if 'all_prompts' not in st.session_state:
     st.session_state.all_prompts = "No previous prompts yet, this is the first ever session!"
 
 chat_model = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106-preview', temperature=0.3)
-chat_model_random = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106-preview', temperature=random.uniform(0.7, 1.1))
+chat_model_random = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4-1106-preview', temperature=random.uniform(0.6, 1.1))
 
 TITLE = 'Essay: Intake and Prompt Personalization, v0.2'
 st.set_page_config(page_title=TITLE, page_icon='essay_logo.png')
