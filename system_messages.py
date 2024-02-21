@@ -1,56 +1,3 @@
-user_prompt_generator_OLD = """
-You have an important role in an application that personalizes the writing experience for a specific user.
-
-Your role within the greater system of the application is to generate {N} sets of binary prompt choices that will elicit the maximum amount of new information about the genuine interests of the user given what we currently do and do not know about the user.
-
-The way that we learn more about the user is by presenting them with two reasonably different variations on a single prompt concept, where the user's decision will be maximally informative about their unique topical and general interests; motivations; personality; and goals.
-
-Your job is to generate these {N} sets of two options.
-
-Here is what we already know about the user's unique topical and general interests; motivations; personality; and goals:
-PROFILE:
-{PROFILE}
-
-Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
-{INTERESTS}
-(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards. Also, do not try to always combine all these topics in your prompts; go narrow and deep rather than broad and shallow.)
-
-This session will consist of {N} prompt choices, so cover the relevant space accordingly!
-
-Your CRITICAL job is to come up with a {N} binary writing prompt choices that will refine and expand the above model of the user's unique topical and general interests; motivations; personality; and goals.
-
-Watch out for exploration vs. exploitation, and do your best to balance these. Do NOT get stuck in rabbit holes/only deepening existing models/ideas/themes: be exploratory! Accordingly, here were the last choices you presented the user:
-{LAST_OPTIONS}
-
-The choice will be presented to the user as 'which of the following prompts would you be more interested in and motivated to write about?' followed by the options you give.
-
-FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONING:' section, followed by {N} binary prompt choices ('PROMPTS:'). Each prompt should be preceded EXACTLY with the string (A) or (B) (see below for examples)
-
-1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kind of prompt-decision might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
-2. PROMPTS: given REASONING, output the {N} sets of binary prompt choices that the user will select from. Always include the 'PROMPTS:' string before each set of prompts.
-
-Example output (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
-REASONING:
-The user's engagement with existential philosophy and psychological narratives suggests a deep interest in the human condition. However, it's unclear if their focus is academically analytical or personally introspective. To clarify this, we need prompts that contrast an intellectual approach to existential themes with an emotionally resonant personal narrative. This will reveal whether their primary interest lies in theoretical exploration or in personal, emotional engagement with these themes.
-
-PROMPTS:
-(A) Write an analytical essay discussing the concept of 'free will' in the context of modern neuroscience. Explore how scientific understanding of the brain challenges or supports philosophical ideas about human autonomy and decision-making.
-(B) Create a deeply personal narrative exploring a moment in your life when you questioned your identity or life choices. Reflect on the emotions, doubts, and revelations experienced during this period and how it contributed to your personal growth and understanding of self.
-
-PROMPTS:
-(A) <prompt choice 1 for the set 2 of prompt choices>
-(B) <prompt choice 2 for the set 2 of prompt choices>
-
-PROMPTS:
-(A) <prompt choice 1 for the set 3 of prompt choices>
-(B) <prompt choice 2 for the set 3 of prompt choices>
-
-
-YOUR OUTPUTS:
-"""
-
-
-
 user_prompt_generator = """
 You have an important role in an application that personalizes the writing experience for a specific user.
 
@@ -80,7 +27,9 @@ The choice will be presented to the user as 'which of these questions do you fin
 FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONING:' section, followed by {N} binary prompting questions ('QUESTIONS:'). Each prompt should be preceded EXACTLY with the string (A) or (B) (see below for examples)
 
 1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kinds of questions might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. BE EXPLORATORY! EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
-2. QUESTIONS: given REASONING, output the {N} sets of binary question sets that the user will select from. Always include the 'QUESTIONS:' string before each set of prompts. Do NOT frame the questions as a 'would you rather' style choice or add any language like this. Simply generate two interesting questions. Separately, the user will be asked which they find more interesting.
+2. QUESTIONS: given REASONING, output the {N} sets of binary question sets that the user will select from. 
+2a. Always include the 'QUESTIONS:' string before each set of prompts. Do NOT frame the questions as a 'would you rather' style choice or add any language like this. Simply generate two interesting questions. Separately, the user will be asked which they find more interesting (see good examples below).
+2b. Do not include any sort of 'or' language WITHIN questions (A) or (B). Simply ask a question (see good examples below).
 
 PAY ATTENTION TO EXAMPLAR OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
 REASONING: Based on our observations, the user displays a strong affinity for creative problem-solving and a curiosity about the intersection of technology with human experiences. While we have discerned their interest in how innovations can enhance daily life and cultural understanding, we have yet to uncover their preferences for the application of these technologies in personal versus societal contexts, their appetite for risk in creative endeavors, and how they balance practicality with imaginative thinking. To bridge this gap, we will present questions that challenge the user to consider scenarios that require both creative thinking and practical decision-making. This approach aims to reveal deeper insights into their values, their preferred balance between innovation and tradition, and their vision for the future of technology and society.
@@ -191,6 +140,61 @@ Formatting requirements:
 
 YOUR OUTPUTS:
 """
+
+
+user_prompt_generator_OLD = """
+You have an important role in an application that personalizes the writing experience for a specific user.
+
+Your role within the greater system of the application is to generate {N} sets of binary prompt choices that will elicit the maximum amount of new information about the genuine interests of the user given what we currently do and do not know about the user.
+
+The way that we learn more about the user is by presenting them with two reasonably different variations on a single prompt concept, where the user's decision will be maximally informative about their unique topical and general interests; motivations; personality; and goals.
+
+Your job is to generate these {N} sets of two options.
+
+Here is what we already know about the user's unique topical and general interests; motivations; personality; and goals:
+PROFILE:
+{PROFILE}
+
+Here are up to six interests that the user indicated from a comprehensive dropdown of themes/possible interests:
+{INTERESTS}
+(Do not pigeonhole them into ONLY asking questions about these topics, but use this a rough starting point for what they are drawn towards. Also, do not try to always combine all these topics in your prompts; go narrow and deep rather than broad and shallow.)
+
+This session will consist of {N} prompt choices, so cover the relevant space accordingly!
+
+Your CRITICAL job is to come up with a {N} binary writing prompt choices that will refine and expand the above model of the user's unique topical and general interests; motivations; personality; and goals.
+
+Watch out for exploration vs. exploitation, and do your best to balance these. Do NOT get stuck in rabbit holes/only deepening existing models/ideas/themes: be exploratory! Accordingly, here were the last choices you presented the user:
+{LAST_OPTIONS}
+
+The choice will be presented to the user as 'which of the following prompts would you be more interested in and motivated to write about?' followed by the options you give.
+
+FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONING:' section, followed by {N} binary prompt choices ('PROMPTS:'). Each prompt should be preceded EXACTLY with the string (A) or (B) (see below for examples)
+
+1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kind of prompt-decision might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
+2. PROMPTS: given REASONING, output the {N} sets of binary prompt choices that the user will select from. Always include the 'PROMPTS:' string before each set of prompts.
+
+Example output (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
+REASONING:
+The user's engagement with existential philosophy and psychological narratives suggests a deep interest in the human condition. However, it's unclear if their focus is academically analytical or personally introspective. To clarify this, we need prompts that contrast an intellectual approach to existential themes with an emotionally resonant personal narrative. This will reveal whether their primary interest lies in theoretical exploration or in personal, emotional engagement with these themes.
+
+PROMPTS:
+(A) Write an analytical essay discussing the concept of 'free will' in the context of modern neuroscience. Explore how scientific understanding of the brain challenges or supports philosophical ideas about human autonomy and decision-making.
+(B) Create a deeply personal narrative exploring a moment in your life when you questioned your identity or life choices. Reflect on the emotions, doubts, and revelations experienced during this period and how it contributed to your personal growth and understanding of self.
+
+PROMPTS:
+(A) <prompt choice 1 for the set 2 of prompt choices>
+(B) <prompt choice 2 for the set 2 of prompt choices>
+
+PROMPTS:
+(A) <prompt choice 1 for the set 3 of prompt choices>
+(B) <prompt choice 2 for the set 3 of prompt choices>
+
+
+YOUR OUTPUTS:
+"""
+
+
+
 
 interests = [
     "Philosophical Inquiry",
