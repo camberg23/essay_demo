@@ -80,16 +80,18 @@ FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONIN
 1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kinds of questions might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. BE EXPLORATORY! EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
 2. QUESTIONS: given REASONING, output the {N} sets of binary question sets that the user will select from. Always include the 'QUESTIONS:' string before each set of prompts.
 
-EXAMPLE OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
+PAY ATTENTION TO EXAMPLAR OUTPUT (for N=3, note that REASONING ALWAYS HAPPENS EXACTLY ONCE, REGARDLESS OF N):
 REASONING: Based on our observations, the user displays a strong affinity for creative problem-solving and a curiosity about the intersection of technology with human experiences. While we have discerned their interest in how innovations can enhance daily life and cultural understanding, we have yet to uncover their preferences for the application of these technologies in personal versus societal contexts, their appetite for risk in creative endeavors, and how they balance practicality with imaginative thinking. To bridge this gap, we will present questions that challenge the user to consider scenarios that require both creative thinking and practical decision-making. This approach aims to reveal deeper insights into their values, their preferred balance between innovation and tradition, and their vision for the future of technology and society.
 
 QUESTIONS:
 (A) Imagine you have the ability to create a new piece of technology that solves a personal inconvenience. What would this technology do, and how would it integrate into your daily life?
 (B) Envision a project that uses technology to address a widespread societal challenge. What challenge would you focus on, and what would your solution entail?
 
+QUESTIONS:
 (A) If you were to start a creative hobby that also serves a community purpose, what would it be and how would you engage others?
 (B) Consider the impact of creating a public art installation that incorporates interactive technology. What message or experience would you aim to convey?
 
+QUESTIONS:
 (A) Propose an idea for a novel or story that explores the theme of technology altering human relationships. What central conflict or question would you examine?
 (B) How would you design an experiment or study to investigate the effects of virtual reality on empathy and social skills?
 
