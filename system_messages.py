@@ -29,7 +29,9 @@ The choice will be presented to the user as 'which of these questions do you fin
 
 FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONING:' section, followed by {N} binary prompting questions ('QUESTIONS:'). Each prompt should be preceded EXACTLY with the string (A) or (B) (see below for examples)
 
-1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kinds of questions might elicit this new learning. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. BE EXPLORATORY! EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS!
+1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kinds of questions might elicit this new learning. 
+1a. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. BE EXPLORATORY! EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS, BUT DO ZOOM INTO THESE AS WELL!
+1b. Make sure the reasoning touches on what we hope to elicit/what general dichotomies we might want to probe using the impending set of paired question choices. Don't spend too long on this, though.
 2. QUESTIONS: given REASONING, output the {N} sets of binary question sets that the user will select from. 
 2a. Always include the 'QUESTIONS:' string before each set of prompts. Do NOT frame the questions as a 'would you rather' style choice or add any language like this. Simply generate two interesting questions. Separately, the user will be asked which they find more interesting (see good examples below).
 2b. Do not include any sort of 'or' language WITHIN questions (A) or (B). Simply ask a question (see good examples below).
@@ -112,6 +114,7 @@ CRUCIAL EXCEPTION TO THIS RULE: If the INSIGHTS clearly indicate that the user E
 
 FORMATTING REQUIREMENTS:
 - if this is the first time the profile is being generated, abide the the guidelines outlined in (1) above.
+- make sure the INTERESTS always make it into the profile
 - do not add any text above or below the bullets; it should just be the bullets
 - if the profile already exists, ensure that the overall formatting of the profile remains the same after your revisions/additions.
 - NEVER let the profile grow to more than a few hundred words/more than 8 key ideas/bullets. The bullets can grow in length past this, but NOT IN NUMBER!
