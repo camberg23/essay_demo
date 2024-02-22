@@ -136,7 +136,7 @@ if st.session_state.process_started:
         # st.write('FULL OUTPUTS', st.session_state.llm_output)
         st.write('**CURRENT STATE OF USER PROFILE:**',st.session_state.profile)
         st.write('**REASONING BEHIND CURRENT ROUND OF PROMPT CHOICES**:', st.session_state.reasoning)
-    st.subheader('**Please select which of the following questions you are naturally more interested in.**')
+    st.subheader('**Please select which of the following two questions naturally interests you more:**')
 
     # Process each iteration until all questions are answered
     if st.session_state.current_iteration <= N:
