@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from system_messages import *
 
-N = 7  # Number of iterations
+N = 6  # Number of questions per round
 progress_step = 1.0 / N
 
 # Initialize session state variables
