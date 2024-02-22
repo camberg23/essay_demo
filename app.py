@@ -126,11 +126,14 @@ def process_user_input():
             
 def process_total_choices():
     chat_chain = LLMChain(prompt=PromptTemplate.from_template(infer_from_answers), llm=chat_model)
-    outputs = chat_chain.run(SESSION_CHOICES=st.session_state.total_choices)
-    st.write(outputs)
-    chat_chain = LLMChain(prompt=PromptTemplate.from_template(answer_profile_reconciliation), llm=chat_model)
+    insights = chat_chain.run(SESSION_CHOICES=st.session_state.total_choices)
+    st.write(insights)
+    chat_chain = LLMChain(prompt=PromptTemplate.from_template(profile_reconciliation), llm=chat_model)
     st.session_state.profile = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests, 
-                                              SESSION_CHOICES=st.session_state.total_choices)
+                                              INSIGHTS=insights)
+    # chat_chain = LLMChain(prompt=PromptTemplate.from_template(answer_profile_reconciliation), llm=chat_model)
+    # st.session_state.profile = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests, 
+    #                                           SESSION_CHOICES=st.session_state.total_choices)
     st.session_state.current_iteration = 1
 
 # Display LLM output and options if process started
