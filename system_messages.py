@@ -31,7 +31,7 @@ FORMATTING REQUIREMENTS: your output should contain two key parts: one 'REASONIN
 
 1. REASONING: given the PROFILE, reason ONCE succinctly but highly intelligently about what we still need to learn, and what general kinds of questions might elicit this new learning. 
 1a. MAXIMIZE COVERAGE OF THE CONCEPTUAL SPACE. BE EXPLORATORY! EACH SESSION PROMPT PAIRING SHOULD AIM TO TEACH US SOMETHING FUNDAMENTALLY NEW ABOUT THE USER. DO NOT OVEREXPLOIT ON ALREADY-KNOWN INFORMATION/IDEAS/THEMES/TOPICS, BUT DO ZOOM INTO THESE AS WELL!
-1b. Make sure the reasoning touches on what we hope to elicit/what general dichotomies we might want to probe using the impending set of paired question choices. Don't spend too long on this, though.
+1b. Make sure the reasoning explicitly touches on what we hope to elicit/what general dichotomies we might want to probe using the impending set of paired question choices. (eg, abstract vs. concrete, realistic vs fantastical, etc). 
 2. QUESTIONS: given REASONING, output the {N} sets of binary question sets that the user will select from. 
 2a. Always include the 'QUESTIONS:' string before each set of prompts. Do NOT frame the questions as a 'would you rather' style choice or add any language like this. Simply generate two interesting questions. Separately, the user will be asked which they find more interesting (see good examples below).
 2b. Do not include any sort of 'or' language WITHIN questions (A) or (B). Simply ask a question (see good examples below).
@@ -77,7 +77,7 @@ CRITICAL: the key inference is NOT "why did the user select (X)? [--> they must 
 
 Your outputs will be directlt passed to another person, who will use this information to update the running profile that we are building from the user. 
 
-FORMATTING REQUIREMENTS: return all of the valid inferences that can be made from this information that is relevant for updating the user's profile. Order your outputs in order of most important/insightful/useful takeaways to potentially less insightful takeaways. Feel free to label key takeaways explicitly. Keep outputs rich and informative, but not needlessly verbose.
+FORMATTING REQUIREMENTS: return the top five most important valid inferences that can be made from this information that is relevant for updating the user's profile. Order your outputs in order of most important/insightful/useful takeaways to potentially less insightful takeaways. Feel free to label key takeaways explicitly. Keep outputs rich and informative, but not needlessly verbose.
 
 YOUR OUTPUTS:
 """
