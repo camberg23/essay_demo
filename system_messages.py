@@ -79,7 +79,7 @@ FORMATTING REQUIREMENTS: output bullets outlining all of the valid inferences th
 YOUR OUTPUTS:
 """
 
-profile_reconciliation = """
+answer_profile_reconciliation = """
 You have an important role in an application that personalizes experiences for a specific user.
 
 The current model of the user's interests; motivations; personality; and goals is as follows (PROFILE):
