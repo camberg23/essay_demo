@@ -163,7 +163,7 @@ if st.session_state.process_started:
 
 with st.sidebar:
     disable = st.session_state.profile == 'No profile yet, this is the first ever session!'
-    st.title('Prompt Personalizer')
+    st.title('Prompt Personalizer (WIP)')
     user_input_topic = st.text_area("Paste your assigned prompt/topic of interest:", height=200)
     user_first_thoughts = st.text_area("Jot down any initial rough thoughts you have about the topic:", height=200)
     if st.button('Personalize topic', key='submit_personalization', disabled=disable):
@@ -177,7 +177,7 @@ with st.sidebar:
                 st.write(personalized_prompt)
         else:
             st.error("Please enter a topic or prompt to proceed.")
-    st.title('Prompt Generator')
+    st.title('Prompt Generator (WIP)')
     if st.button('Generate a random prompt for me', disabled=disable):
         with st.spinner('Generating a personalized prompt...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_idea_generator), llm=chat_model_random)
