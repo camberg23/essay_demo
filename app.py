@@ -127,7 +127,7 @@ def process_user_input():
 def process_total_choices():
     chat_chain = LLMChain(prompt=PromptTemplate.from_template(infer_from_answers), llm=chat_model)
     insights = chat_chain.run(SESSION_CHOICES=st.session_state.total_choices)
-    st.write(insights)
+    # st.write(insights)
     chat_chain = LLMChain(prompt=PromptTemplate.from_template(profile_reconciliation), llm=chat_model)
     st.session_state.profile = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests, 
                                               INSIGHTS=insights)
@@ -156,7 +156,7 @@ if st.session_state.process_started:
 
         # Submit button
         if st.button('**Submit**'):
-            with st.spinner('Processing your choices and generating a new set of prompts (this might take ~30s)...'):
+            with st.spinner('Processing your choices and generating a new set of prompts (this could take up to 1 min)...'):
                 # st.snow()
                 # st.write(st.session_state.total_choices)
                 process_user_input()  # Function to process user input
