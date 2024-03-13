@@ -140,7 +140,7 @@ def process_total_choices():
 
 # Display LLM output and options if process started
 if st.session_state.process_started:
-    with st.expander('See cognition of LLM'):
+    with st.expander('See what the LLM has learned about you and how it developed this set of questions'):
         # st.write('FULL OUTPUTS', st.session_state.llm_output)
         st.write('**CURRENT STATE OF USER PROFILE:**',st.session_state.profile)
         st.write('**REASONING BEHIND CURRENT ROUND OF PROMPT CHOICES**:', st.session_state.reasoning)
