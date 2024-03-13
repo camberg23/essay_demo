@@ -71,9 +71,10 @@ def display_current_prompt():
         if len(raw_options) >= 2:
             option_a = raw_options[0].strip().replace("(A)", "").strip()
             option_b = raw_options[1].strip().replace("(B)", "").strip()
-            st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}", "(C) Equally interesting", "(D) Neither/something else"]
+            st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}"]
+            # st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}", "(C) Equally interesting", "(D) Neither/something else"]
         else:
-            st.session_state.options = ["(D) Neither/something else"]
+            st.session_state.options = ["Sorry, there was an uncaught error in generating options for you. Please refresh the page and try again."]
     else:
         st.session_state.options = ["No more prompts available"]
 
@@ -143,7 +144,7 @@ if st.session_state.process_started:
         # st.write('FULL OUTPUTS', st.session_state.llm_output)
         st.write('**CURRENT STATE OF USER PROFILE:**',st.session_state.profile)
         st.write('**REASONING BEHIND CURRENT ROUND OF PROMPT CHOICES**:', st.session_state.reasoning)
-    st.subheader('**Please select which of the following two questions naturally interests you more:**')
+    st.subheader('**Please choose which of the following two questions you’d rather address in your writing:**')
 
     # Process each iteration until all questions are answered
     if st.session_state.current_iteration <= N:
