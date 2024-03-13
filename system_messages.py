@@ -206,11 +206,11 @@ Requirement 3: please do NOT try to overambitiously synthesize every point of th
 Requirement 4: please do NOT overexploit on the specified interests (weight these lower); give significantly more weight to the user profile.
 Requirement 5: ALWAYS integrate their thinking into at least one or two of your suggestions if they offered any rough thoughts.
 
-CRITICAL: THIS IS A TOOL MEANT TO FACILTIATE THE USER'S CREATIVITY, NOT FOR YOU TO COME UP WITH IDEAS FOR THEM. DO NOT GIVE DETAILS ON HOW TO APPROACH THE WRITING, JUST PRESENT THE PERSONALIZED TOPICS OF INTEREST.
+CRITICAL: THIS IS A TOOL MEANT TO FACILTIATE THE USER'S CREATIVITY, NOT FOR YOU TO COME UP WITH IDEAS OR DO THE THINKING FOR THEM. DO NOT GIVE DETAILS ON HOW TO APPROACH THE WRITING, JUST PRESENT THE PERSONALIZED TOPICS OF INTEREST.
 
 FORMATTTING REQUIREMENTS:
 Output three relatively short, incisive, high-quality numbered QUESTIONS that would personalize the relevant topic and serve as a prompt for the user. Try to hit at different SINGLE angles with each of the questions.
-Just output the numbered questions, no other outputs!
+Just output the numbered questions, no other outputs! Do not just generate ideas for the user for the content of the essay, smuggled in the form of a question. The questions should be genuinely probative and catalyze thinking on the part of the USER, not YOU!
 
 YOUR OUTPUTS:
 """
