@@ -174,7 +174,7 @@ with st.sidebar:
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_personalizer), llm=chat_model)
                 personalized_prompt = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests,
                                                      USER_INPUT=user_input_topic, FIRST_THOUGHTS=user_first_thoughts)
-                st.subheader('Here are some suggestions for personalizing this topic:')
+                st.subheader('Here are some personalized prompts drawing on this topic:')
                 st.write(personalized_prompt)
         else:
             st.error("Please enter a topic or prompt to proceed.")
