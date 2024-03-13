@@ -165,8 +165,8 @@ if st.session_state.process_started:
 with st.sidebar:
     disable = st.session_state.profile == 'No profile yet, this is the first ever session!'
     st.title('Prompt Personalizer')
-    user_input_topic = st.text_area("Paste your assigned prompt/topic of interest:", height=200)
-    user_first_thoughts = st.text_area("Jot down any initial rough thoughts you have about the topic:", height=200)
+    user_input_topic = st.text_area("Input your assigned prompt or topic of interest:", height=200)
+    user_first_thoughts = st.text_area("Jot down any initial rough thoughts you might have about this topic:", height=200)
     if st.button('Personalize topic', key='submit_personalization', disabled=disable):
         if user_input_topic:
             # Call LLM with the user's input
