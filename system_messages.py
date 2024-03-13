@@ -235,7 +235,7 @@ Address your outputs warmly and helpfully directly to the user (second-person), 
 Do NOT try to incorporate all or most of their profile or interests into a single prompt. It is okay to pick a few if desired to synergize, but it is too messy to try to meld them all. Picking a small chunk of the profile/interests and generating an amazing prompt from it is better than trying to squeeze the whole profile/interests into one prompt.
 Be wary of inferring highly specific topical interests from the user's profile. TAKE GREAT PAINS NOT TO overattribute any specific topical information in the profile to the user unless the profile says that the user explicitly specified a specific interest.
 
-Formatting requirement: simply output a key question for the user to explore with some related subquestions (no more than 3 subsquestions total).
+Formatting requirement: simply output a key question for the user to explore with some related subquestions (no more than 3 subsquestions total). It should be one (unlabeled) question with a maximum of three (unlabeled) subsquestion bullets under it.
 CRITICAL: THIS IS A TOOL MEANT TO FACILTIATE THE USER'S CREATIVITY, NOT FOR YOU TO COME UP WITH IDEAS FOR THEM. DO NOT GIVE DETAILS ON HOW TO APPROACH THE QUESTION, JUST PRESENT IT AS DESCRIBED ABOVE.
 
 YOUR OUTPUTS:
