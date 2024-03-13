@@ -182,6 +182,6 @@ with st.sidebar:
     if st.button('Generate a random prompt for me', disabled=disable):
         with st.spinner('Generating a personalized prompt...'):
                 chat_chain = LLMChain(prompt=PromptTemplate.from_template(prompt_idea_generator), llm=chat_model_random)
-                random_topic = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests)
+                random_topic = chat_chain.run(PROFILE=st.session_state.profile, INTERESTS=st.session_state.selected_interests, RANDOM=random.uniform(1,100000000))
                 st.subheader('Here is a personalized writing prompt for you:')
                 st.write(random_topic)
