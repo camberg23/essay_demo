@@ -166,6 +166,7 @@ if st.session_state.process_started:
 
 with st.sidebar:
     disable = st.session_state.profile == 'No profile yet, this is the first ever session!'
+    disable2 = st.session_state.process_started == False
 
     # Move the selected interests input to the top of the sidebar
     st.title("Selected Interests")
@@ -179,7 +180,7 @@ with st.sidebar:
     )
     
     # Update interests button
-    if st.button('Update Interests'):
+    if st.button('Update Interests', disabled=disable2):
         st.session_state.selected_interests = st.session_state.interim_interests
 
     
