@@ -71,8 +71,8 @@ def display_current_prompt():
         if len(raw_options) >= 2:
             option_a = raw_options[0].strip().replace("(A)", "").strip()
             option_b = raw_options[1].strip().replace("(B)", "").strip()
-            st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}"]
-            # st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}", "(C) Equally interesting", "(D) Neither/something else"]
+            # st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}"]
+            st.session_state.options = [f"(A) {option_a}", f"(B) {option_b}", "(C) Equally interesting", "(D) Neither/something else"]
         else:
             st.session_state.options = ["Sorry, there was an uncaught error in generating options for you. Please refresh the page and try again."]
     else:
@@ -153,7 +153,7 @@ if st.session_state.process_started:
         
         # Text input for custom answer
         if st.session_state.selected_option == "(D) Neither/something else":
-            st.session_state.custom_answer = st.text_input("Write in:", value=st.session_state.custom_answer, placeholder="just a few words on why you chose (D) or what you'd rather write about")
+            st.session_state.custom_answer = st.text_input("Write in:", value=st.session_state.custom_answer, placeholder="just a couple of words on why you chose (D) or what you'd rather write about")
 
         # Submit button
         if st.button('**Submit**'):
