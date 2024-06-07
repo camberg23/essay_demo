@@ -47,6 +47,7 @@ chat_model_random = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt
 TITLE = 'essay.app: Intake and Prompt Personalization, v0.4'
 st.set_page_config(page_title=TITLE, page_icon='essay_logo.png')
 st.title(TITLE)
+st.markdown('[User draft directions](https://docs.google.com/document/d/1PKCTD1h836ExDOS8xw3qUpuRGUy532b5CQMVXi41q8k/edit?usp=sharing)')
 
 progress_bar = st.progress(st.session_state.current_iteration * progress_step)
 
