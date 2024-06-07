@@ -38,6 +38,8 @@ if 'selected_interests' not in st.session_state:
     st.session_state.selected_interests = ""
 if 'all_prompts' not in st.session_state:
     st.session_state.all_prompts = "No previous prompts yet, this is the first ever session!"
+if 'interim_interests' not in st.session_state:
+    st.session_state.interim_interests = ""
 
 chat_model = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4o-2024-05-13', temperature=0.3)
 chat_model_random = ChatOpenAI(openai_api_key=st.secrets['API'], model_name='gpt-4o-2024-05-13', temperature=random.uniform(0.6, 1.1))
@@ -164,6 +166,23 @@ if st.session_state.process_started:
 
 with st.sidebar:
     disable = st.session_state.profile == 'No profile yet, this is the first ever session!'
+
+    # Move the selected interests input to the top of the sidebar
+    st.title("Selected Interests")
+    
+    # Assign interim selected interests
+    st.session_state.interim_interests = st.multiselect(
+        "Select your interests:", 
+        interests, 
+        default=st.session_state.selected_interests,
+        max_selections=6,
+    )
+    
+    # Update interests button
+    if st.button('Update Interests'):
+        st.session_state.selected_interests = st.session_state.interim_interests
+
+    
     st.title('Prompt Personalizer')
     user_input_topic = st.text_area("Input your assigned prompt or topic of interest:", height=200)
     user_first_thoughts = st.text_area("Jot down any initial rough thoughts you might have about this topic:", height=200)
