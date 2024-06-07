@@ -169,11 +169,11 @@ with st.sidebar:
     disable2 = st.session_state.process_started == False
 
     # Move the selected interests input to the top of the sidebar
-    st.title("Selected Interests")
+    st.title("Update Interests")
     
     # Assign interim selected interests
     st.session_state.interim_interests = st.multiselect(
-        "Select your interests:", 
+        "Update your initial interests as desired:", 
         interests, 
         default=st.session_state.selected_interests,
         max_selections=6,
