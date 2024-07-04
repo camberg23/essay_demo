@@ -30,8 +30,6 @@ if 'custom_answer' not in st.session_state:
     st.session_state.custom_answer = ""
 if 'raw_options' not in st.session_state:
     st.session_state.raw_options = ""
-if 'current_iteration' not in st.session_state:
-    st.session_state.raw_options = 0
 if 'profile' not in st.session_state:
     st.session_state.profile = 'No profile yet, this is the first ever session!'
 if 'selected_interests' not in st.session_state:
